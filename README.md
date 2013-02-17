@@ -31,7 +31,7 @@ To show the "items per page" selector:
 suitable to be used as a cache key.
 
 
-To show the page selector:
+To show the "page" selector:
 `{% paginator [objects] %}`
 
 
