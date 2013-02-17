@@ -18,14 +18,14 @@ Installation:
 Add `pagination` to your INSTALLED_APPS.
 
 Add:
-`<script type="text/javascript" src="{{ STATIC_URL }}pagination/js/pagination.js"></script>`
-`<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
-{% load pagination_tags %}
+- `<script type="text/javascript" src="{{ STATIC_URL }}pagination/js/pagination.js"></script>`
+- `<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
+- `{% load pagination_tags %}`
 
 to the templates where you are leveraging pagination.
 
 To show the "items per page" selector:
-{% items_per_page_form 'my_objects_items_per_page' [objects] %}
+`{% items_per_page_form 'my_objects_items_per_page' [objects] %}`
 
 `my_objects_items_per_page` could also be a context variable , as long as it's
 suitable to be used as a cache key.
