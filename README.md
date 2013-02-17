@@ -18,9 +18,9 @@ Installation:
 Add `pagination` to your INSTALLED_APPS.
 
 Add:
-- `<script type="text/javascript" src="{{ STATIC_URL }}pagination/js/pagination.js"></script>`
-- `<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
-- {% load pagination_tags %}
+`<script type="text/javascript" src="{{ STATIC_URL }}pagination/js/pagination.js"></script>`
+`<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
+{% load pagination_tags %}
 
 to the templates where you are leveraging pagination.
 
@@ -32,14 +32,14 @@ suitable to be used as a cache key.
 
 
 To show the page selector:
-{% paginator [objects] %}
+`{% paginator [objects] %}`
 
 
 Usage:
 --------------------------------------------------------------------------------
-# my_view.py
+    # my_view.py
 
-from pagination.utils import paginate_items
+    from pagination.utils import paginate_items
 
     def some_view(request):
         some_objects = MyModel.objects.all()  # Can also be a list or tuple
