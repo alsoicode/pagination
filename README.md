@@ -32,7 +32,7 @@ Add:
 - `<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
 - `{% load pagination_tags %}`
 
-to the templates where you are leveraging pagination.
+to the template(s) where you are leveraging pagination.
 
 To show the "items per page" selector:
 `{% items_per_page_form 'my_objects_items_per_page' [objects] %}`
