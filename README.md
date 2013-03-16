@@ -17,6 +17,16 @@ Installation:
 
 Add `pagination` to your INSTALLED_APPS.
 
+Add `(r'^pagination/', include('pagination.urls')),` to your base urls:
+
+    urlpatterns = patterns('',
+        url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+        url(r'^admin/', include(admin.site.urls)),
+
+        (r'^pagination/', include('pagination.urls')),
+        ...
+    )
+
 Add:
 - `<script type="text/javascript" src="{{ STATIC_URL }}pagination/js/pagination.js"></script>`
 - `<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
