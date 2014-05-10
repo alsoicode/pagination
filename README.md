@@ -32,7 +32,7 @@ Add:
 - `<link type="text/css" href="{{ STATIC_URL }}pagination/css/pagination.css" rel="stylesheet" />`
 - `{% load pagination_tags %}`
 
-to the template(s) where you are leveraging pagination. If you're using Django 1.5 or above, you would replace `{{ STATIC_URL }}` with `{% static '[path-to-file]' %}`. Don't forget to also include the statifiles template tag: `{% load static from staticfiles %}`
+to the template(s) where you are leveraging pagination. If you're using Django 1.5 or above, you would replace `{{ STATIC_URL }}` with `{% static '[path-to-file]' %}`. Don't forget to also include the staticfiles template tag: `{% load static from staticfiles %}`
 
 To show the "items per page" selector:
 `{% items_per_page_form 'items-per-page-cache-key' [objects] %}`
