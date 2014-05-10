@@ -1,5 +1,5 @@
 Pagination
-================================================================================
+===============================================================================
 
 A simple paginator for Django that allows you to choose the number of items
 per page and features a drop-down menu to jump to the next page.
@@ -8,8 +8,13 @@ Twitter Bootstrap friendly.
 
 Requirements:
 --------------------------------------------------------------------------------
-- jQuery
-- Twitter Bootstrap not absolutely required, but recommended.
+- [jQuery](http://jquery.com)
+- [Twitter Bootstrap](http://getbootstrap.com) not absolutely required, but recommended.
+- [Django Widget Tweaks](https://pypi.python.org/pypi/django-widget-tweaks)
+
+Requirements:
+-------------------------------------------------------------------------------
+For Django 1.4.x or below, use the "legacy" branch. Otherwise, use "master"
 
 
 Installation:
