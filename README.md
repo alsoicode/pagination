@@ -35,9 +35,9 @@ Add:
 to the template(s) where you are leveraging pagination.
 
 To show the "items per page" selector:
-`{% items_per_page_form 'my_objects_items_per_page' [objects] %}`
+`{% items_per_page_form 'items-per-page-cache-key' [objects] %}`
 
-`my_objects_items_per_page` could also be a context variable , as long as it's
+`items-per-page-cache-key` could also be a context variable , as long as it's
 suitable to be used as a cache key.
 
 
