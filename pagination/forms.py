@@ -10,7 +10,8 @@ class ItemsPerPageForm(forms.Form):
     def __init__(self, *args, **kwargs):
         cache_prefix = kwargs.pop('cache_prefix', None)
         super(ItemsPerPageForm, self).__init__(*args, **kwargs)
-        self.fields['cache_prefix'] = forms.CharField(widget=forms.HiddenInput(),
+        self.fields['cache_prefix'] = forms.CharField(
+            widget=forms.HiddenInput(),
             initial=cache_prefix)
 
 

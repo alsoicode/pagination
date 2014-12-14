@@ -1,8 +1,8 @@
 {% load pagination_filters %}
-<form class="paginator" action="." method="get" enctype="application/x-www-form-urlencoded">
-    <a class="btn {% if not items.has_previous %}disabled{% endif %}" {% if not items.has_previous %}disabled="disabled"{% endif %} {% if items.has_previous %}href="?page={{ items.previous_page_number }}{{ request.GET|getvars }}"{% endif %}><i class="icon icon-chevron-left"></i></a>
+<form class="paginator" action="." method="get" enctype="application/x-www-form-urlencoded" role="form">
+    <a class="btn {% if not items.has_previous %}btn-disabled{% endif %}" {% if not items.has_previous %}disabled="disabled"{% endif %} {% if items.has_previous %}href="?page={{ items.previous_page_number }}{{ request.GET|getvars }}"{% endif %}><i class="icon icon-chevron-left"></i></a>
     <span>Page </span>
     {{ form.page }}
     <span> of {{ items.paginator.num_pages }}</span>
-    <a class="btn {% if not items.has_next %}disabled{% endif %}" {% if not items.has_next %}disabled="disabled"{% endif %} {% if items.has_next %}href="?page={{ items.next_page_number }}{{ request.GET|getvars }}"{% endif %}><i class="icon icon-chevron-right"></i></a>
+    <a class="btn {% if not items.has_next %}btn-disabled{% endif %}" {% if not items.has_next %}disabled="disabled"{% endif %} {% if items.has_next %}href="?page={{ items.next_page_number }}{{ request.GET|getvars }}"{% endif %}><i class="icon icon-chevron-right"></i></a>
 </form>
