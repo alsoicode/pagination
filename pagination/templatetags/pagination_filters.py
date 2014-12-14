@@ -10,10 +10,14 @@ def getvars(value):
     if it exists and returns any other values present
     """
     request_vars = value.copy()
-    if 'page' in request_vars:
+
+    # if 'page' is already in the request_vars, remove it, as it will be
+    # added later. This prevents duplicate 'page' parameters being included
+    # in the return value
+    if 'page' in request_vars.dict():
         del request_vars['page']
 
-    if request_vars.items():
+    if request_vars.dict():
         concatenator = '&'
     else:
         concatenator = ''

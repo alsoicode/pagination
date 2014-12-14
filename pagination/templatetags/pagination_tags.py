@@ -3,6 +3,7 @@ from django import template
 from pagination.constants import (ITEMS_PER_PAGE_CHOICES,
     DEFAULT_ITEMS_PER_PAGE_START_INDEX)
 from pagination.forms import ItemsPerPageForm, PageForm
+from pagination.templatetags.pagination_filters import getvars
 from pagination.utils import get_cache_key
 
 register = template.Library()
@@ -40,3 +41,8 @@ def paginator(context, items):
         page=request.GET.get('page', 1))
 
     return {'items': items, 'form': form, 'request': request}
+
+
+@register.simple_tag
+def form_action(request):
+    return '{}?{}'.format(request.path, getvars(request.GET)[1:])
