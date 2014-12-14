@@ -5,6 +5,8 @@
         factory(root.jQuery);
     }
 }(this, function($) {
+    'use strict';
+
     $(document).ready(function() {
         // Handler for items per page form
         $('.items-per-page, .paginator').change(function(e){
