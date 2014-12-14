@@ -1,5 +1,5 @@
 {% load widget_tweaks %}
 <form class="items-per-page pull-left" action="{% url 'set_items_per_page' %}" method="post" enctype="application/x-www-form-urlencoded" role="form">
-    <span>{{ items.start_index }}-{{ items.end_index }} of {{ items.paginator.count }} item{{ items.paginator.count|pluralize }}</span> {{ form.number|add_class:"items-per-page" }} <span>per page</span>
+    <span>{{ items.start_index }}-{{ items.end_index }} of {{ items.paginator.count }} item{{ items.paginator.count|pluralize }}</span> {{ form.number|add_class:"items-per-page form-control" }} <span>per page</span>
     {{ form.cache_prefix }}
 </form>
