@@ -37,7 +37,7 @@ Add:
 
 to the template(s) where you are leveraging pagination. If you're using Django 1.5 or above, you would replace `{{ STATIC_URL }}` with `{% static '[path-to-file]' %}`. Don't forget to also include the staticfiles template tag: `{% load static from staticfiles %}`
 
-Optionally, you can load the `pagination.js` file via an AMD loader like require.js
+Optionally, you can load the `pagination.js` file via an AMD loader like [require.js](http://requirejs.org/), just be sure to list jQuery as a requirement in your shim.
 
 To show the "items per page" selector:
 `{% items_per_page_form 'items-per-page-cache-key' [objects] %}`
