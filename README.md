@@ -12,8 +12,6 @@ Requirements:
 - [Twitter Bootstrap](http://getbootstrap.com) not absolutely required, but recommended.
 - [Django Widget Tweaks](https://pypi.python.org/pypi/django-widget-tweaks)
 
-Requirements:
--------------------------------------------------------------------------------
 For Django 1.4.x or below, use the "legacy" branch. Otherwise, use "master"
 
 
@@ -38,6 +36,8 @@ Add:
 - `{% load pagination_tags %}`
 
 to the template(s) where you are leveraging pagination. If you're using Django 1.5 or above, you would replace `{{ STATIC_URL }}` with `{% static '[path-to-file]' %}`. Don't forget to also include the staticfiles template tag: `{% load static from staticfiles %}`
+
+Optionally, you can load the `pagination.js` file via an AMD loader like require.js
 
 To show the "items per page" selector:
 `{% items_per_page_form 'items-per-page-cache-key' [objects] %}`
